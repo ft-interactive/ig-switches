@@ -49,7 +49,7 @@
   	//Custom styles
   	var demoSwitch4 = switchInputFactory('example-switch-4', ['custom (1!)','custom 2','custom 3','custom 4','custom 5'], { activeClass:'my-active-class', inactiveClass:'my-inactive-class', disabledClass:'my-disabled-class' });
   	$(demoSwitch4).on('state-change', function(){
-      $('#example-output-4').html('switch set to: ' + this.getState());
+      $('#example-output-4').html('switch set to: ' + this.state);
     });
 
 

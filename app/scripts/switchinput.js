@@ -11,14 +11,6 @@ function switchInputFactory(id, states, options){
 		return option;
 	}
 
-	function makeLookup(arr){
-		var lu = {};
-		for(var i = 0; i< arr.length; i++){
-			lu[ arr[i] ] = i;
-		}
-		return lu;
-	}
-
 
 	if(!states){ states = ['on','off']; }
 	if(!options){ options = {}; }
@@ -27,12 +19,13 @@ function switchInputFactory(id, states, options){
 		states:states,
 		id:id,
 		defaultState:states[0],
+		lookup:{},
 		disabledStates:[],
-		labels:{},
 		activeClass:'active-switch-state',
 		inactiveClass:'inactive-switch-state',
 		disabledClass:'disabled-switch-state'
 	};	
+
 
 	for(var o in options){
 		switchInput[o] = options[o];
@@ -68,11 +61,6 @@ function switchInputFactory(id, states, options){
 		toggleSwitch(getStateID(switchInput.state));
 	};
 
-	switchInput.getState = function(){
-		console.log(this);
-		switchInput.labels[switchInput.state];
-		return switchInput.labels[switchInput.state];
-	}
 
 	function getStateID(state){
 		var s = switchInput.id+'-'+state.replace(/[\W\s]/g,'_') 
@@ -98,7 +86,6 @@ function switchInputFactory(id, states, options){
 
 	$.each(switchInput.states, function(i){
 		var newID = getStateID(switchInput.states[i]);
-		switchInput.labels[newID] = switchInput.states[i];
 		$('#'+switchInput.id)
 			.append('<div id="' + newID + '" class="' + switchInput.id + '-state ' + switchInput.inactiveClass +'">' + switchInput.states[i] + '</div>');
 	});
