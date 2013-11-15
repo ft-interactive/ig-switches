@@ -1,0 +1,14 @@
+{
+  "name": "ig-switches",
+  "version": "0.0.0",
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "es5-shim": "~2.1.0",
+    "html5shiv": "~3.6.2",
+    "jquery": "~1.9.1",
+    "ig-fill": "https://gist.github.com/baa2d589782ec1eb4afc.git",
+    "ig-furniture": "https://gist.github.com/375ebcf89f9aa70c0a1e.git",
+    "minimal": "https://github.com/ft-interactive/minimal.git#master"
+  },
+  "devDependencies": {}
+}

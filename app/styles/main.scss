@@ -1,0 +1,39 @@
+@import "var";
+@import "minimal/minimal";
+@import "switches";
+
+//nicities
+body{
+	font-family:$sans;
+}
+
+.switch-output{
+	max-width:400px;
+	background:$ft-lightpink;
+	padding:20px;
+}
+
+//custom switch styling
+
+.my-switch-class{
+	@extend .switch;
+	width:100px;
+	display:block;
+}
+
+.my-active-class{
+	@extend .my-switch-class;
+	background:$ft-bluetint1;
+	color:$ft-lightpink;
+}
+
+.my-inactive-class{
+	@extend .my-switch-class;
+	@extend .inactive-switch-state;
+}
+
+.my-inactive-class:hover{
+	@extend .my-switch-class;
+	background:$ft-bluetint3;
+	color:$ft-lightpink;	
+}
