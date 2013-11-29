@@ -13,9 +13,7 @@
   ],
   
   "ignore": [
-    "app/scripts/main.js",
-    "app/styles/_var.scss",
-    "app/styles/main.scss",
+    "app"
     "dist",
     "package.json",
     "Gruntfile.js",

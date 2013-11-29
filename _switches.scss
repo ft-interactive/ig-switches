@@ -1,0 +1,46 @@
+@import "compass/css3/border-radius";
+
+.input-switch{
+	font-family:$sans;
+}
+
+.switch{
+	font-size: 0.7rem;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-right:3px;
+	padding:6px 10px 6px 10px;
+	@include border-radius(4px);
+	cursor: pointer;
+	display:inline-block;
+}
+
+.disabled-switch-state{
+	@extend .switch;
+	background:$ft-coolgrey2;
+	color:$ft-warmgrey1;
+	cursor: default;
+}
+
+.active-switch-state{
+	@extend .switch;
+	background:$ft-redtint3;
+	color:$ft-lightpink;
+}
+
+.inactive-switch-state{
+	@extend .switch;
+	color:$ft-darkgrey;
+	background-color:$ft-tint2;
+}
+
+.inactive-switch-state:hover{
+	@extend .switch;
+	color:$ft-lightpink;
+	background:$ft-redtint5;
+}
+
+.switch-prompt{
+	font-size: 0.7rem;
+	margin-right:10px;
+}

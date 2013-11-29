@@ -353,6 +353,11 @@ module.exports = function (grunt) {
         'mocha'
     ]);
 
+    grunt.task.registerTask('makebower', 'make that Bower thing', function(){
+        grunt.file.copy('app/styles/_switches.scss', './_switches.scss');
+        grunt.file.copy('app/scripts/switchinput.js', './switchinput.js');
+    });
+
     grunt.registerTask('build', [
         'clean:dist',
         'useminPrepare',
@@ -362,6 +367,7 @@ module.exports = function (grunt) {
         'cssmin',
         'uglify',
         'copy:dist',
+        'makebower',
         'rev',
         'usemin'
     ]);
