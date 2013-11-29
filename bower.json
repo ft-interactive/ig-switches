@@ -13,11 +13,16 @@
   ],
   
   "ignore": [
-    "bower_components/**/*",
-    "scripts/main.js",
+    "app/scripts/main.js",
+    "app/styles/_var.scss",
+    "app/styles/main.scss",
+    "dist",
+    "package.json",
+    "Gruntfile.js",
     "**/*.txt",
     ".htaccess",
-    "index.html"
+    "index.html",
+    "test"
   ],
   
   "readmeFilename": "README.md",
