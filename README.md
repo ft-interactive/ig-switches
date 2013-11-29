@@ -14,10 +14,18 @@ From your project's root directory type
 
 The basic usage is: 
 
+* Make some HTML
+
+```html
+<div id="my-lovely-switch">My Switch</div>
+```
+
 * Create a switch ( passing the id attribute of the DOM element to which the switch should be appended and a set of 2+ states )
 
 ```javascript
-var myLovelySwitch = switchInputFactory('my-lovely-DOM-id', [ 'Bulbasaur', 'Caterpie', 'Pikachu', 'Vulpix', 'Psyduck' ], { defaultState:'Pikachu' });
+var myLovelySwitch = switchInputFactory(
+	'my-lovely-switch', 
+	[ 'Bulbasaur', 'Caterpie', 'Pikachu', 'Vulpix', 'Psyduck' ]);
 ```
 
 * Add an event listener to the switch so when it's state is changed you can do something with that information
