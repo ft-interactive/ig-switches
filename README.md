@@ -1,7 +1,7 @@
 IG Switches
 ===========
 
-A simple switch. Nothing fancy.
+A simple switch. Nothing fancy. [See some examples](http://ft-interactive.github.io/ig-switches/)
 
 ##Installation
 
@@ -10,7 +10,6 @@ From your project's root directory type
 ```bower install --save git+https://github.com/ft-interactive/ig-switches.git```
 
 ##Usage
-[See some examples](http://ft-interactive.github.io/ig-switches/)
 
 The basic usage is: 
 
