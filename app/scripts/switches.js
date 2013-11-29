@@ -19,7 +19,8 @@ function switchInputFactory(id, states, options){
 		states:states,
 		id:id,
 		defaultState:states[0],
-		lookup:{},
+		lookupStateName:{},
+		lookupStateID:{},
 		disabledStates:[],
 		activeClass:'active-switch-state',
 		inactiveClass:'inactive-switch-state',
@@ -31,17 +32,29 @@ function switchInputFactory(id, states, options){
 		switchInput[o] = options[o];
 	}
 
+	for (var i = 0; i<switchInput.states.length; i++){
+		var id = getStateID(switchInput.states[i]);
+		switchInput.lookupStateName[ id ] = switchInput.states[i];
+		switchInput.lookupStateID[ switchInput.states[i] ] = id;
+	}
+
+	function getStateID(state){
+		var s = switchInput.id+'-'+state.replace(/[\W\s]/g,'_');
+		return s; //switchInput.id+'-'+state;
+	}
+
 	$('#'+switchInput.id).addClass('input-switch');
 
 
 	switchInput.changeState = function(stateName){
-		switchInput.state = stateName;
-		toggleSwitch(getStateID(stateName));
+		var id = getStateID(stateName);
+		switchInput.state = switchInput.lookupStateName[id];
+		toggleSwitch(id);
 		$(switchInput).trigger('state-change');
 	};
 
 	switchInput.disableState = function(state){
-		$('#'+getStateID(state))
+		$('#'+switchInput.lookupStateID[state] )
 			.removeClass(switchInput.activeClass)
 			.removeClass(switchInput.inactiveClass)
 			.addClass(switchInput.disabledClass);
@@ -68,12 +81,6 @@ function switchInputFactory(id, states, options){
 		}
 		toggleSwitch(getStateID(switchInput.state));
 	};
-
-
-	function getStateID(state){
-		var s = switchInput.id+'-'+state.replace(/[\W\s]/g,'_');
-		return s;//switchInput.id+'-'+state;
-	}
 
 	function toggleSwitch(activeID){
 		$('.' + switchInput.id + '-state')
