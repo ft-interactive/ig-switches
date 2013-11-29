@@ -9,7 +9,7 @@
   },
   
   "scripts": [
-    "scripts/switchinput.js"
+    "scripts/switches.js"
   ],
   
   "ignore": [
