@@ -14,6 +14,8 @@ From your project's root directory type
 
 The basic usage is: 
 
+* Don't forget to have the switchinput.js file and the main.css file included in your HTML document
+
 * Make some HTML
 
 ```html
@@ -40,13 +42,19 @@ $(myLovelySwitch).on('state-change', function(){
 
 You can specify other things when you create your switch in the form of an options object like this
 ```javascript
-{
-	defaultState:"state three",
-	disabledStates:["state one", "state four"],
-	activeClass:'active-switch-state',
-	inactiveClass:'inactive-switch-state',
-	disabledClass:'disabled-switch-state'
+var switchOptions = {
+	defaultState:"Pikachu",
+	disabledStates:["Caterpie", "Psyduck"],
+	activeClass:'my-active-switch-state',
+	inactiveClass:'my-inactive-switch-state',
+	disabledClass:'my-disabled-switch-state'
 }
+
+var myLovelySwitch = switchInputFactory(
+	'my-lovely-switch', 
+	[ 'Bulbasaur', 'Caterpie', 'Pikachu', 'Vulpix', 'Psyduck' ],
+	switchOptions);
+
 ```
 
 ```defaultState``` : Which of the switches states should be selected upon creation
@@ -59,4 +67,4 @@ You can specify other things when you create your switch in the form of an optio
 
 ```disableState``` : disable a particular state ```myLovelySwitch.disableState('Psyduck')``` (NOTE: if you disable the currently selected state the next available state will be selected, this might not be your intention so be careful!)
 ```enableState``` : enable a particular state ```myLovelySwitch.enableState('Psyduck')```
-```setState``` : programatically (i.e. not by user input) select a particular state ```myLovelySwitch.setState('Pikachu')```
+```changeState``` : programatically (i.e. not by user input) select a particular state ```myLovelySwitch.changeState('Pikachu')``` (NOTE: calling this mehtod on a disabled state will enable and select it, this might not be your intention so be careful!)
