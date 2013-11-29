@@ -311,18 +311,15 @@ module.exports = function (grunt) {
         },
         concurrent: {
             server: [
-                
                 'compass',
                 'coffee:dist',
                 'copy:styles'
             ],
             test: [
-                
                 'coffee',
                 'copy:styles'
             ],
             dist: [
-                
                 'coffee',
                 'compass',
                 'copy:styles',
@@ -347,8 +344,6 @@ module.exports = function (grunt) {
             'watch'
         ]);
     });
-
-    
 
     grunt.registerTask('test', [
         'clean:server',

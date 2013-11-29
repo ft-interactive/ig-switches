@@ -24,14 +24,14 @@ function switchInputFactory(id, states, options){
 		activeClass:'active-switch-state',
 		inactiveClass:'inactive-switch-state',
 		disabledClass:'disabled-switch-state'
-	};	
+	};
 
 
 	for(var o in options){
 		switchInput[o] = options[o];
 	}
 
-	$('#'+switchInput.id).addClass('input-switch')
+	$('#'+switchInput.id).addClass('input-switch');
 	switchInput.disableState = function(state){
 		$('#'+getStateID(state))
 			.removeClass(switchInput.activeClass)
@@ -63,7 +63,7 @@ function switchInputFactory(id, states, options){
 
 
 	function getStateID(state){
-		var s = switchInput.id+'-'+state.replace(/[\W\s]/g,'_') 
+		var s = switchInput.id+'-'+state.replace(/[\W\s]/g,'_');
 		return s;//switchInput.id+'-'+state;
 	}
 
