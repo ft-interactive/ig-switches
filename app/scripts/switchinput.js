@@ -38,7 +38,7 @@ function switchInputFactory(id, states, options){
 		switchInput.state = stateName;
 		toggleSwitch(getStateID(stateName));
 		$(switchInput).trigger('state-change');
-	}
+	};
 
 	switchInput.disableState = function(state){
 		$('#'+getStateID(state))
