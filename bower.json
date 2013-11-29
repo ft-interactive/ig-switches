@@ -1,7 +1,33 @@
 {
   "name": "ig-switches",
-  "version": "0.0.0",
+  
+  "version": "0.1.0",
+  
   "dependencies": {
+    "jquery": "~1.9.1",
+    "minimal": "https://github.com/ft-interactive/minimal.git#master"
+  },
+  
+  "scripts": [
+    "scripts/switchinput.js"
+  ],
+  
+  "ignore": [
+    "bower_components/**/*",
+    "scripts/main.js",
+    "**/*.txt",
+    ".htaccess",
+    "index.html"
+  ],
+  
+  "readmeFilename": "README.md",
+  
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ft-interactive/ig-switches.git"
+  },
+
+  "devDependencies": {
     "modernizr": "~2.6.2",
     "es5-shim": "~2.1.0",
     "html5shiv": "~3.6.2",
@@ -9,6 +35,5 @@
     "ig-fill": "https://gist.github.com/baa2d589782ec1eb4afc.git",
     "ig-furniture": "https://gist.github.com/375ebcf89f9aa70c0a1e.git",
     "minimal": "https://github.com/ft-interactive/minimal.git#master"
-  },
-  "devDependencies": {}
+  }
 }
