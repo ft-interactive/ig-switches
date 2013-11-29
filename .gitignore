@@ -4,3 +4,4 @@ node_modules
 .sass-cache
 .ftppass
 app/bower_components
+dist/index.html
