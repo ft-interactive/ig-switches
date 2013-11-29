@@ -1,4 +1,4 @@
-ig-switches
+IG Switches
 ===========
 
 A simple switch. Nothing fancy.
@@ -14,7 +14,7 @@ From your project's root directory type
 
 The basic usage is: 
 
-* Don't forget to have the switchinput.js file and the main.css file included in your HTML document
+* Don't forget to have the switchinput.js file in your HTML document and include the relevant stuff in sass i.e. 'ig-switches/main'
 
 * Make some HTML
 
