@@ -14,6 +14,13 @@
 	@include border-radius(4px);
 	cursor: pointer;
 	display:inline-block;
+	&:focus, &:active {
+		outline: none;
+		outline-color: transparent;
+		outline-style: none;
+		border-bottom: none;
+		box-shadow: 0px 0px 0px 2pt $ft-bluetint5;
+	}
 }
 
 switch:focus {
