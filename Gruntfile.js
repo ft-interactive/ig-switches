@@ -355,7 +355,7 @@ module.exports = function (grunt) {
 
     grunt.task.registerTask('makebower', 'make that Bower thing', function(){
         grunt.file.copy('app/styles/_switches.scss', './_switches.scss');
-        grunt.file.copy('app/scripts/switchinput.js', './switchinput.js');
+        grunt.file.copy('app/scripts/switches.js', './switches.js');
     });
 
     grunt.registerTask('build', [
