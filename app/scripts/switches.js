@@ -11,6 +11,10 @@ function switchInputFactory(id, states, options){
 		return option;
 	}
 
+	function getStateID(state){
+		var s = switchInput.id+'-'+state.replace(/[\W\s]/g,'_');
+		return s; //switchInput.id+'-'+state;
+	}
 
 	if(!states){ states = ['on','off']; }
 	if(!options){ options = {}; }
@@ -33,15 +37,12 @@ function switchInputFactory(id, states, options){
 	}
 
 	for (var i = 0; i<switchInput.states.length; i++){
-		var id = getStateID(switchInput.states[i]);
-		switchInput.lookupStateName[ id ] = switchInput.states[i];
-		switchInput.lookupStateID[ switchInput.states[i] ] = id;
+		var theId = getStateID(switchInput.states[i]);
+		switchInput.lookupStateName[ theId ] = switchInput.states[i];
+		switchInput.lookupStateID[ switchInput.states[i] ] = theId;
 	}
 
-	function getStateID(state){
-		var s = switchInput.id+'-'+state.replace(/[\W\s]/g,'_');
-		return s; //switchInput.id+'-'+state;
-	}
+
 
 	$('#'+switchInput.id).addClass('input-switch');
 
