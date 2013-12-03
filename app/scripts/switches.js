@@ -103,7 +103,7 @@ function switchInputFactory(id, states, options){
 	$.each(switchInput.states, function(i){
 		var newID = getStateID(switchInput.states[i]);
 		$('#'+switchInput.id)
-			.append('<div id="' + newID + '" class="' + switchInput.id + '-state ' + switchInput.inactiveClass +'">' + switchInput.states[i] + '</div>');
+			.append('<button id="' + newID + '" class="' + switchInput.id + '-state ' + switchInput.inactiveClass +'">' + switchInput.states[i] + '</button>');
 	});
 
 	$('.' + switchInput.id + '-state').on('click', function(ev){
