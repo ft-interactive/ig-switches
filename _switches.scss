@@ -10,9 +10,21 @@
 	margin-bottom:5px;
 	margin-right:3px;
 	padding:6px 10px 6px 10px;
+	border-style:none;
 	@include border-radius(4px);
 	cursor: pointer;
 	display:inline-block;
+	&:focus, &:active {
+		outline: none;
+		outline-color: transparent;
+		outline-style: none;
+		border-bottom: none;
+		box-shadow: 0px 0px 0px 2pt $ft-bluetint5;
+	}
+}
+
+switch:focus {
+	outline: none;
 }
 
 .disabled-switch-state{
