@@ -69,3 +69,4 @@ var myLovelySwitch = switchInputFactory(
 ```disableState``` : disable a particular state ```myLovelySwitch.disableState('Psyduck')``` (NOTE: if you disable the currently selected state the next available state will be selected, this might not be your intention so be careful!)
 ```enableState``` : enable a particular state ```myLovelySwitch.enableState('Psyduck')```
 ```changeState``` : programatically (i.e. not by user input) select a particular state ```myLovelySwitch.changeState('Pikachu')``` (NOTE: calling this method on a disabled state will enable and select it, this might not be your intention so be careful!)
+```nextState``` , ```previousState``` : programatically cycle through the states (this will loop around)
