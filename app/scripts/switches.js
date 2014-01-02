@@ -54,6 +54,24 @@ function switchInputFactory(id, states, options){
 		$(switchInput).trigger('state-change');
 	};
 
+	switchInput.nextState = function(){
+		var currentState = switchInput.states.indexOf(switchInput.state);
+		var next = currentState+1;
+		if(next >= switchInput.states.length){
+			next = 0;
+		}
+		switchInput.changeState(switchInput.states[next]);
+	};
+
+	switchInput.previousState = function(){
+		var currentState = switchInput.states.indexOf(switchInput.state);
+		var next = currentState - 1;
+		if(next < 0){
+			next = switchInput.states.length - 1;
+		}
+		switchInput.changeState(switchInput.states[next]);
+	};
+
 	switchInput.disableState = function(state){
 		$('#'+switchInput.lookupStateID[state] )
 			.removeClass(switchInput.activeClass)

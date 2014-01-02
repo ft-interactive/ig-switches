@@ -71,5 +71,12 @@
 
       $('#example-output-5').html('data from ' + selectedColumn + ': ' + data.join(', '));
     });
+
+    var demoSwitch6 = switchInputFactory('example-switch-6', ['first','second','third','fourth']);
+    $('#eg-6-back').on('click',demoSwitch6.previousState);
+    $('#eg-6-next').on('click',demoSwitch6.nextState);
+    $(demoSwitch6).on('state-change', function(){
+      $('#example-output-6').html('switch set to: ' + this.state);
+    });
   });
 }(this, jQuery));
