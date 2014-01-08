@@ -3,7 +3,7 @@ IG Switches
 
 A simple switch. Nothing fancy. [See some examples](http://ft-interactive.github.io/ig-switches/)
 
-update 2013-1-2 1.0.0 : added previous and next state functions
+update 2013-1-2 0.2.0 : added previous and next state functions, new default style
 
 update 2013-12-3 0.1.1 : For keyboard accessibility switched to use 'buttons' instead of 'divs'. Including nicely styles active and focus states.
 
