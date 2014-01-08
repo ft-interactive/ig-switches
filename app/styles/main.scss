@@ -19,6 +19,7 @@ body{
 	@extend .switch;
 	width:100px;
 	display:block;
+	border-style:none;
 }
 
 .my-active-class{
@@ -30,6 +31,8 @@ body{
 .my-inactive-class{
 	@extend .my-switch-class;
 	@extend .inactive-switch-state;
+	background:$ft-bluetint2;
+	color:$ft-black;
 }
 
 .my-inactive-class:hover{
