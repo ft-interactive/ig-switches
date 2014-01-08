@@ -8,12 +8,14 @@
 	font-size: 0.7rem;
 	margin-top:5px;
 	margin-bottom:5px;
-	margin-right:3px;
 	padding:6px 10px 6px 10px;
-	border-style:none;
 	@include border-radius(4px);
 	cursor: pointer;
 	display:inline-block;
+	border: 1px solid $ft-warmgrey2;
+    margin-right: 10px;
+    transition: background, 0.3s;
+
 	&:focus, &:active {
 		outline: none;
 		outline-color: transparent;
@@ -32,24 +34,36 @@ switch:focus {
 	background:$ft-coolgrey2;
 	color:$ft-warmgrey1;
 	cursor: default;
+	&:focus{
+		border-bottom: 1px solid $ft-warmgrey2;
+	}
 }
 
 .active-switch-state{
 	@extend .switch;
-	background:$ft-redtint3;
-	color:$ft-lightpink;
+    background:$ft-warmgrey2;
+    color:$ft-lightpink;
+    transition: background, 0.3s;
+    &:focus{
+		border-bottom: 1px solid $ft-warmgrey2;
+	}
 }
 
 .inactive-switch-state{
 	@extend .switch;
-	color:$ft-darkgrey;
-	background-color:$ft-tint2;
+	color:$ft-warmgrey2;
+    background-color:$ft-primarypink;
+    border: 1px solid $ft-warmgrey2;
+    &:focus{
+		border-bottom: 1px solid $ft-warmgrey2;
+	}
 }
 
 .inactive-switch-state:hover{
 	@extend .switch;
-	color:$ft-lightpink;
-	background:$ft-redtint5;
+    background: $ft-tint2;
+    border: 1px solid $ft-warmgrey2;
+    color:$ft-warmgrey2;
 }
 
 .switch-prompt{
