@@ -25,6 +25,13 @@ The basic usage is:
 <div id="my-lovely-switch">My Switch</div>
 ```
 
+* Import styles
+
+```scss
+@import 'ft-scss-variables/main'
+@import 'ig-switches/switches';
+```
+
 * Create a switch ( passing the id attribute of the DOM element to which the switch should be appended and a set of 2+ states )
 
 ```javascript

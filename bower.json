@@ -5,7 +5,7 @@
   
   "dependencies": {
     "jquery": "~1.9.1",
-    "minimal": "https://github.com/ft-interactive/minimal.git#master"
+    "ft-scss-variables": "https://github.com/ft-interactive/ft-scss-variables.git"
   },
   
   "scripts": [

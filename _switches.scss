@@ -12,7 +12,7 @@
 	@include border-radius(4px);
 	cursor: pointer;
 	display:inline-block;
-	border: 1px solid $ft-warmgrey2;
+	border: 1px solid $ft-color-warmgrey2;
     margin-right: 10px;
     transition: background, 0.3s;
 
@@ -21,7 +21,7 @@
 		outline-color: transparent;
 		outline-style: none;
 		border-bottom: none;
-		box-shadow: 0px 0px 0px 2pt $ft-bluetint5;
+		box-shadow: 0px 0px 0px 2pt $ft-color-bluetint5;
 	}
 }
 
@@ -31,39 +31,39 @@ switch:focus {
 
 .disabled-switch-state{
 	@extend .switch;
-	background:$ft-coolgrey2;
-	color:$ft-warmgrey1;
+	background:$ft-color-coolgrey2;
+	color:$ft-color-warmgrey1;
 	cursor: default;
 	&:focus{
-		border-bottom: 1px solid $ft-warmgrey2;
+		border-bottom: 1px solid $ft-color-warmgrey2;
 	}
 }
 
 .active-switch-state{
 	@extend .switch;
-    background:$ft-warmgrey2;
-    color:$ft-lightpink;
+    background:$ft-color-warmgrey2;
+    color:$ft-color-lightpink;
     transition: background, 0.3s;
     &:focus{
-		border-bottom: 1px solid $ft-warmgrey2;
+		border-bottom: 1px solid $ft-color-warmgrey2;
 	}
 }
 
 .inactive-switch-state{
 	@extend .switch;
-	color:$ft-warmgrey2;
-    background-color:$ft-primarypink;
-    border: 1px solid $ft-warmgrey2;
+	color:$ft-color-warmgrey2;
+    background-color:$ft-color-primarypink;
+    border: 1px solid $ft-color-warmgrey2;
     &:focus{
-		border-bottom: 1px solid $ft-warmgrey2;
+		border-bottom: 1px solid $ft-color-warmgrey2;
 	}
 }
 
 .inactive-switch-state:hover{
 	@extend .switch;
-    background: $ft-tint2;
-    border: 1px solid $ft-warmgrey2;
-    color:$ft-warmgrey2;
+    background: $ft-color-tint2;
+    border: 1px solid $ft-color-warmgrey2;
+    color:$ft-color-warmgrey2;
 }
 
 .switch-prompt{
